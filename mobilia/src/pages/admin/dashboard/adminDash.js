@@ -7,12 +7,15 @@ const Dashboard = () => {
   useEffect(() => {
     loggingOut && signOut();
   }, [loggingOut]);
+
+
   return (
     <div>
       secured
       <button onClick={(e) => setLoggingOut(true)}>sign out</button>
     </div>
   );
+
 };
 
 export default Dashboard;

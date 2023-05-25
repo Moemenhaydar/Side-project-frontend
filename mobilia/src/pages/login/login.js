@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useSignIn } from "react-auth-kit";
+import  "../login/login.css";
 const LoginPage = () => {
   const signIn = useSignIn();
   const [email, setEmail] = useState("");
@@ -32,8 +33,10 @@ const LoginPage = () => {
           tokenType: "Bearer",
           authState: response.data.user,
         });
-        if(route==="admin"){
-          navigate("/dashboard")
+        if (route === "admin") {
+          navigate("/dashboard");
+        } else if (route === "owner") {
+          navigate("/dashboard/product");
         }
       }
     } catch (error) {
@@ -46,33 +49,52 @@ const LoginPage = () => {
   };
 
   return (
-    <div>
+    <div className="container-login">
+      <div className="login-form-wrapper">
+        
+      <form onSubmit={handleSubmit} className="form-login">
       <h1>Login</h1>
-      <form onSubmit={handleSubmit}>
-        <select defaultValue={route} onChange={(e) => setRoute(e.target.value)}>
-          <option value={"admin"}>Admin</option>
-          <option value={"owner"}>Owner</option>
+        <select
+          defaultValue={route}
+          onChange={(e) => setRoute(e.target.value)}
+          className="select-login "
+          >
+          <option value={"admin"} className="option-login">
+            Admin
+          </option>
+          <option value={"owner"} className="option-login">
+            Owner
+          </option>
         </select>
-        <div>
-          <label htmlFor="email">Email:</label>
+        <div className="contain-login">
+          <label htmlFor="email" className="label-login">
+            Email:
+          </label>
           <input
             type="email"
             id="email"
+            className="input-login"
             value={email}
             onChange={handleEmailChange}
-          />
+            />
         </div>
-        <div>
-          <label htmlFor="password">Password:</label>
+        <div className="contain-login">
+          <label htmlFor="password" className="label-login">
+            Password:
+          </label>
           <input
+            className="input-login"
             type="password"
             id="password"
             value={password}
             onChange={handlePasswordChange}
-          />
+            />
         </div>
-        <button type="submit">Login</button>
+        <button type="submit" className="button-login">
+          Login
+        </button>
       </form>
+            </div>
     </div>
   );
 };
