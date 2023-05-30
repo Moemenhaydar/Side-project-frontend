@@ -2,7 +2,7 @@ import "./footer.css";
 import React from "react";
 import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import contactUs from "../contact/contactUs";
+// import contactUs from "../contact/contactUs";
 
 function Footer() {
   return (
