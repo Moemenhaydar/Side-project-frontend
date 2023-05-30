@@ -11,11 +11,11 @@ const Home = () => {
         </p>
         <button className="home-btn">Discover More</button>
       </div>
-      <div className="home-cards">
+      {/* <div className="home-cards">
         <div className="home-card"></div>
         <div className="home-card"></div>
         <div className="home-card"></div>
-      </div>
+      </div> */}
     </section>
   );
 };

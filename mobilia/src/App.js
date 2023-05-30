@@ -11,9 +11,9 @@ import Home from "./pages/home/home.js";
 import SubCategory from "./pages/admin/subcategory/subcategory";
 import ContactDash from "./pages/admin/contactus/contactus";
 import Visiter from "./routes/visiter.js";
-// import Admin from "./routes/admin.js"
-// import Navbar from "../src/components/header/nav.js"
 import About from "../src/pages/about/about.js";
+import ProductVisitor from "./components/products/productvisitor";
+// import Admin from "./routes/admin.js"
 
 function App() {
   return (
@@ -52,6 +52,7 @@ function App() {
         <Route path="/" element={<Visiter />}>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/product" element={<ProductVisitor />} />
         </Route>
       </Routes>
     </div>

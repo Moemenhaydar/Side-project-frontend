@@ -26,6 +26,11 @@ export const SidebarData = [
     heading: "Admin",
   },
   {
+    path: "Owners",
+    icon: PersonIcon,
+    heading: "Owners",
+  },
+  {
     path: "Categories",
     icon: GridViewIcon,
     heading: "Categories",
@@ -39,6 +44,11 @@ export const SidebarData = [
     path: "Products",
     icon: AssessmentIcon,
     heading: "Products",
+  },
+  {
+    path: "Contact",
+    icon: ContactMailIcon,
+    heading: "Contact us",
   },
   
  

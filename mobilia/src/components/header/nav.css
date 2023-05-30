@@ -6,6 +6,7 @@
   height: 10vh;
   width: 100%;
   margin: auto;
+  /* position:fixed; */
   /* border-radius: 0 0 10px 10px; */
 }
 .nav-contain .nav-ul {
@@ -17,8 +18,8 @@
   height: 100%;
   float: left;
 
-  margin-left: 5%;
-  padding-left: 0;
+  /* margin-left: 5%; */
+  padding-left: 50px;
 }
 .nav-ul .nav-li {
   list-style: none;
