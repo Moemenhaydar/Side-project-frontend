@@ -2,6 +2,7 @@ import "./footer.css";
 import React from "react";
 import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import contactUs from "../contact/contactUs";
 
 function Footer() {
   return (
@@ -28,8 +29,9 @@ function Footer() {
           </li>
          
           <li className="li-footer">
-            <a className="a-footer" href="/dashboard/contact-us">
-              Contact Us
+            <a className="a-footer" href="contactus/contactus.js">
+              <Link to="/contact">
+              Contact Us</Link>
             </a>
           </li>
         </ul>
