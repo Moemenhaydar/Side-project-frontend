@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
-import LogoutIcon from "@mui/icons-material/Logout";
+// import LogoutIcon from "@mui/icons-material/Logout";
 import { motion } from "framer-motion";
 import Logo from "../../images/mobilia.png";
 import { SidebarData } from "./data";
